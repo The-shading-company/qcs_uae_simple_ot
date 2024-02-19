@@ -6,7 +6,9 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "timeslot"
+  "timeslot",
+  "food_allowance",
+  "exclude_territories"
  ],
  "fields": [
   {
@@ -14,11 +16,22 @@
    "fieldtype": "Data",
    "label": "Timeslot",
    "unique": 1
+  },
+  {
+   "fieldname": "food_allowance",
+   "fieldtype": "Currency",
+   "label": "Food Allowance"
+  },
+  {
+   "fieldname": "exclude_territories",
+   "fieldtype": "Table MultiSelect",
+   "label": "Exclude Territories",
+   "options": "QCS Exclude Territory"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-19 15:42:40.098817",
+ "modified": "2024-02-19 16:51:50.010670",
  "modified_by": "Administrator",
  "module": "Qcs Uae Simple Ot",
  "name": "QCS UAE Simple OT Timeslots",
