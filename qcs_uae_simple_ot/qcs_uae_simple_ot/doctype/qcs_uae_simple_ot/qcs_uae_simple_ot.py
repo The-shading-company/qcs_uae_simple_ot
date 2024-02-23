@@ -15,7 +15,7 @@ class QCSUAESimpleOT(Document):
 			basic_amount = s_com.amount
 			for i in range(0, len(tab)):
        
-		# Over Time
+		# OverTime
   
 				amount = []
 				if (emp_doc.holiday_list):
