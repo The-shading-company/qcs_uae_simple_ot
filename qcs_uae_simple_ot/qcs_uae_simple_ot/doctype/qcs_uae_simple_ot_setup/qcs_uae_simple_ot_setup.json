@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-23 10:40:06.407645",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_salary_component",
+  "normal_ot_multiplier",
+  "holiday_ot_multiplier"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_salary_component",
+   "fieldtype": "Link",
+   "label": "Basic Salary Component",
+   "options": "Salary Component"
+  },
+  {
+   "fieldname": "normal_ot_multiplier",
+   "fieldtype": "Float",
+   "label": "Normal OT Multiplier"
+  },
+  {
+   "fieldname": "holiday_ot_multiplier",
+   "fieldtype": "Float",
+   "label": "Holiday OT Multiplier"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-02-23 10:41:47.753067",
+ "modified_by": "Administrator",
+ "module": "Qcs Uae Simple Ot",
+ "name": "QCS UAE Simple OT Setup",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

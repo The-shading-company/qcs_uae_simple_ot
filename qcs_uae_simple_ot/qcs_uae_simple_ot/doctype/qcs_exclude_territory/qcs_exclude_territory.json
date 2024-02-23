@@ -12,6 +12,7 @@
   {
    "fieldname": "territory",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Territory",
    "options": "Territory"
   }
@@ -19,7 +20,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-02-19 16:47:32.940922",
+ "modified": "2024-02-23 10:48:28.687767",
  "modified_by": "Administrator",
  "module": "Qcs Uae Simple Ot",
  "name": "QCS Exclude Territory",

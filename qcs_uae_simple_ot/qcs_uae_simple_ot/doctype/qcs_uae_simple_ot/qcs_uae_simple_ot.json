@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:OT-{MM}-{YY}-{####}",
  "creation": "2024-02-19 15:19:20.233141",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,7 +10,8 @@
   "column_break_cilt",
   "employee",
   "section_break_gfwc",
-  "time_entries"
+  "time_entries",
+  "amended_from"
  ],
  "fields": [
   {
@@ -36,14 +38,26 @@
    "fieldtype": "Table",
    "label": "Time Entries",
    "options": "QCS UAE Simple OT Entries"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "QCS UAE Simple OT",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-02-19 15:48:22.725757",
+ "modified": "2024-02-23 10:22:14.525727",
  "modified_by": "Administrator",
  "module": "Qcs Uae Simple Ot",
  "name": "QCS UAE Simple OT",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -55,6 +69,29 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
    "share": 1,
    "write": 1
   }

@@ -24,14 +24,14 @@
   },
   {
    "fieldname": "exclude_territories",
-   "fieldtype": "Table MultiSelect",
+   "fieldtype": "Table",
    "label": "Exclude Territories",
    "options": "QCS Exclude Territory"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-19 16:51:50.010670",
+ "modified": "2024-02-23 10:48:38.204160",
  "modified_by": "Administrator",
  "module": "Qcs Uae Simple Ot",
  "name": "QCS UAE Simple OT Timeslots",
