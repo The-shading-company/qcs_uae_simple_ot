@@ -1,0 +1,174 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{JRF}-{#######}",
+ "creation": "2024-02-24 11:53:52.375953",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_v3ap",
+  "id",
+  "customer_name",
+  "sales_person",
+  "invoice_no",
+  "installation_date",
+  "employee",
+  "site_location",
+  "product",
+  "mistake_details",
+  "corrective_action",
+  "mistake_made_by",
+  "amended_from",
+  "column_break_arvk",
+  "labour_cost",
+  "transport_cost",
+  "fabric_cost",
+  "stitching_cost",
+  "other_cost",
+  "total"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_v3ap",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "id",
+   "fieldtype": "Int",
+   "label": "ID"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "sales_person",
+   "fieldtype": "Link",
+   "label": "Sales Person",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "invoice_no",
+   "fieldtype": "Link",
+   "label": "Invoice No",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "installation_date",
+   "fieldtype": "Date",
+   "label": "Installation Date"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Table MultiSelect",
+   "label": "Installation Team",
+   "options": "Employee Child Tab"
+  },
+  {
+   "fieldname": "site_location",
+   "fieldtype": "Small Text",
+   "label": "Site Location"
+  },
+  {
+   "fieldname": "product",
+   "fieldtype": "Link",
+   "label": "Product",
+   "options": "Item"
+  },
+  {
+   "fieldname": "mistake_details",
+   "fieldtype": "Small Text",
+   "label": "Mistake Details"
+  },
+  {
+   "fieldname": "corrective_action",
+   "fieldtype": "Small Text",
+   "label": "Corrective Action"
+  },
+  {
+   "fieldname": "mistake_made_by",
+   "fieldtype": "Data",
+   "label": "Mistake Made by"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Job Revisions Form",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_arvk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "labour_cost",
+   "fieldtype": "Currency",
+   "label": "Labour Cost"
+  },
+  {
+   "default": "0",
+   "fieldname": "transport_cost",
+   "fieldtype": "Currency",
+   "label": "Transport Cost"
+  },
+  {
+   "default": "0",
+   "fieldname": "fabric_cost",
+   "fieldtype": "Currency",
+   "label": "Fabric Cost"
+  },
+  {
+   "default": "0",
+   "fieldname": "stitching_cost",
+   "fieldtype": "Currency",
+   "label": "Stitching Cost"
+  },
+  {
+   "default": "0",
+   "fieldname": "other_cost",
+   "fieldtype": "Currency",
+   "label": "Other Cost"
+  },
+  {
+   "default": "0",
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-02-24 12:56:15.756964",
+ "modified_by": "Administrator",
+ "module": "Qcs Uae Simple Ot",
+ "name": "Job Revisions Form",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
