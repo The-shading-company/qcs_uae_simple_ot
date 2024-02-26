@@ -19,6 +19,7 @@
   "corrective_action",
   "mistake_made_by",
   "amended_from",
+  "item2",
   "column_break_arvk",
   "labour_cost",
   "transport_cost",
@@ -142,12 +143,19 @@
    "fieldtype": "Currency",
    "label": "Total",
    "read_only": 1
+  },
+  {
+   "fieldname": "item2",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "item2",
+   "options": "Item"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-02-24 12:56:15.756964",
+ "modified": "2024-02-26 09:50:38.825402",
  "modified_by": "Administrator",
  "module": "Qcs Uae Simple Ot",
  "name": "Job Revisions Form",
