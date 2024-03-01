@@ -122,6 +122,27 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
+doc_events = {
+	"Quotation": {
+		"validate": "qcs_uae_simple_ot.controller.quotation.check_dis",
+	}
+}
+
+
+fixtures = [
+	{
+		"dt": "Custom Field", "filters": [
+			[
+				"name", "in", [
+					'Company-custom_sales_manager_max_discount',
+					'Company-custom_sales_man_max_discount',
+				]
+			]
+		],
+
+	},
+	
+]
 # doc_events = {
 # 	"*": {
 # 		"on_update": "method",
