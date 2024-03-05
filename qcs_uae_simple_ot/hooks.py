@@ -124,7 +124,7 @@ app_license = "mit"
 
 doc_events = {
 	"Quotation": {
-		"validate": "qcs_uae_simple_ot.controller.quotation.check_dis",
+		#"validate": "qcs_uae_simple_ot.controller.quotation.check_dis",
 	}
 }
 
