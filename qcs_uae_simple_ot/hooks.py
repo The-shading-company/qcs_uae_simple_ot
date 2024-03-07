@@ -122,11 +122,19 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
+<<<<<<< HEAD
 # doc_events = {
 # 	"Quotation": {
 # 		"validate": "qcs_uae_simple_ot.controller.quotation.check_dis",
 # 	}
 # }
+=======
+doc_events = {
+	"Quotation": {
+		#"validate": "qcs_uae_simple_ot.controller.quotation.check_dis",
+	}
+}
+>>>>>>> origin/develop
 
 
 fixtures = [
