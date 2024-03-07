@@ -23,5 +23,27 @@ frappe.ui.form.on('TSC Awning Pricing', {
 				frm.set_value("canopy_bom_cost", r.message);
 			}
         });
+	},
+	copy: function(frm) {
+		if(cur_frm.doc.product_description){
+			const show_success_alert = () => {
+				frappe.show_alert({
+					indicator: "green",
+					message: __("Copied to clipboard."),
+				});
+			};
+			if (navigator.clipboard && window.isSecureContext) {
+				navigator.clipboard.writeText(cur_frm.doc.product_description).then(show_success_alert);
+			} else {
+				let input = $("<textarea>");
+				$("body").append(input);
+				input.val(cur_frm.doc.product_description).select();
+	
+				document.execCommand("copy");
+				show_success_alert();
+				input.remove();
+			}
+
+		}
 	}
 });

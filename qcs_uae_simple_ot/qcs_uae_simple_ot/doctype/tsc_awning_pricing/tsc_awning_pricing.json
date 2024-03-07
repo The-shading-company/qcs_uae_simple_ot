@@ -20,7 +20,8 @@
   "total_selling",
   "total_cost",
   "column_break_lgmxs",
-  "product_description"
+  "product_description",
+  "copy"
  ],
  "fields": [
   {
@@ -96,12 +97,17 @@
    "fieldname": "product_description",
    "fieldtype": "Small Text",
    "label": "Product Description"
+  },
+  {
+   "fieldname": "copy",
+   "fieldtype": "Button",
+   "label": "Copy"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-03-05 09:29:51.945404",
+ "modified": "2024-03-07 11:50:15.582831",
  "modified_by": "Administrator",
  "module": "Qcs Uae Simple Ot",
  "name": "TSC Awning Pricing",
