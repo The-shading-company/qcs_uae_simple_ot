@@ -74,10 +74,11 @@
    "label": "Total"
   },
   {
-   "default": "2.10",
+   "default": "2.1",
    "fieldname": "total_selling_multiplier",
    "fieldtype": "Float",
-   "label": "Total Selling Multiplier"
+   "label": "Total Selling Multiplier",
+   "precision": "1"
   },
   {
    "fieldname": "total_selling",
@@ -107,7 +108,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-03-07 11:50:15.582831",
+ "modified": "2024-03-07 12:23:13.796766",
  "modified_by": "Administrator",
  "module": "Qcs Uae Simple Ot",
  "name": "TSC Awning Pricing",
