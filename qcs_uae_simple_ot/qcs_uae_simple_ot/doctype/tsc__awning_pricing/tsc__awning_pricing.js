@@ -1,10 +1,10 @@
 // Copyright (c) 2024, QCS and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('TSC Awning Pricing', {
+frappe.ui.form.on('TSC  Awning Pricing', {
 	awning_item: function(frm) {
 		frappe.call({
-            method: 'qcs_as_so_po.qcs_so_and_po.doctype.tsc_awning_pricing.tsc_awning_pricing.awning_item_cost',
+            method: 'qcs_uae_simple_ot.qcs_uae_simple_ot.doctype.tsc__awning_pricing.tsc__awning_pricing.awning_item_cost',
             args: {
                 "awning_item": cur_frm.doc.awning_item,
             },
@@ -15,7 +15,7 @@ frappe.ui.form.on('TSC Awning Pricing', {
 	},
 	canopy_item: function(frm) {
 		frappe.call({
-            method: 'qcs_as_so_po.qcs_so_and_po.doctype.tsc_awning_pricing.tsc_awning_pricing.canopy_item_cost',
+            method: 'qcs_uae_simple_ot.qcs_uae_simple_ot.doctype.tsc__awning_pricing.tsc__awning_pricing.canopy_item_cost',
             args: {
                 "canopy_item": cur_frm.doc.canopy_item,
             },

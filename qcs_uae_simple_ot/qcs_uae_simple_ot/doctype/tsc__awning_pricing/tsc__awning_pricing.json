@@ -1,7 +1,8 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-03-04 11:48:53.529315",
+ "autoname": "format:{DD}-{MM}-{YY}-{####}",
+ "creation": "2024-03-09 10:59:53.846046",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -83,12 +84,14 @@
   {
    "fieldname": "total_selling",
    "fieldtype": "Currency",
-   "label": "Total Selling"
+   "label": "Total Selling",
+   "read_only": 1
   },
   {
    "fieldname": "total_cost",
    "fieldtype": "Currency",
-   "label": "Total Cost"
+   "label": "Total Cost",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_lgmxs",
@@ -106,12 +109,12 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "issingle": 1,
  "links": [],
- "modified": "2024-03-07 12:23:13.796766",
+ "modified": "2024-03-09 11:16:38.825128",
  "modified_by": "Administrator",
  "module": "Qcs Uae Simple Ot",
- "name": "TSC Awning Pricing",
+ "name": "TSC  Awning Pricing",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
