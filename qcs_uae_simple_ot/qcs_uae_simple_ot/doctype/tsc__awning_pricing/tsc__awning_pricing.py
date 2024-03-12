@@ -18,8 +18,10 @@ class TSCAwningPricing(Document):
 		else:
 			frappe.throw("Please Select Valid Canopy Item")
 
-		self.total_cost = self.awning_bom_cost + self.canopy_bom_cost
-		self.total_selling = (self.awning_bom_cost + self.canopy_bom_cost) * self.total_selling_multiplier
+		frappe.db.set_value("TSC Awning Pricing", self.name, "total_cost", (self.awning_bom_cost + self.canopy_bom_cost), ignore_permissions=True)
+		#self.total_cost = 
+		#self.total_selling = (self.awning_bom_cost + self.canopy_bom_cost) * self.total_selling_multiplier
+		frappe.db.set_value("TSC Awning Pricing", self.name, "total_selling", ((self.awning_bom_cost + self.canopy_bom_cost) * 2.1), ignore_permissions=True)
 		self.product_description = "Awning Item"+" - "+doc.description+"\n"+"Canopy Item"+" - "+doc1.description + " : " + str(round(self.total_selling)) + " + 400AED Installation + 5%VAT"
 
 
