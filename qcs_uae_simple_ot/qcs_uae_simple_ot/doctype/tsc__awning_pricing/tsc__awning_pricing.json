@@ -41,6 +41,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "0",
    "fieldname": "awning_bom_cost",
    "fieldtype": "Currency",
    "label": "Awning Bom Cost",
@@ -63,6 +64,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "0",
    "fieldname": "canopy_bom_cost",
    "fieldtype": "Currency",
    "label": "Canopy Bom Cost",
@@ -110,7 +112,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-09 11:16:38.825128",
+ "modified": "2024-03-12 09:39:30.344195",
  "modified_by": "Administrator",
  "module": "Qcs Uae Simple Ot",
  "name": "TSC  Awning Pricing",
