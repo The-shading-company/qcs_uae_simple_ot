@@ -11,7 +11,7 @@ class QCSUAESimpleOT(Document):
 			tab = self.time_entries
 			emp_doc = frappe.get_doc("Employee", self.employee)
 			ot_setup = frappe.get_doc("QCS UAE Simple OT Setup")
-			ssa = frappe.get_list("Salary Structure Assignment",filters={"employee": self.employee},order="from_date desc",fields=["base"])
+			ssa = frappe.get_list("Salary Structure Assignment",filters={"employee": self.employee},order_by="from_date desc",fields=["base"])
 			#s_com = frappe.get_doc("Salary Component", ot_setup.basic_salary_component)
 			basic_amount = ssa[0].base
 			for i in range(0, len(tab)):
