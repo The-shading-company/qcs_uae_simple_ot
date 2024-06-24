@@ -47,6 +47,8 @@ class QCSUAESimpleOT(Document):
 					"employee": self.employee,
 					"payroll_date": tab[i].get("date"),
 					"salary_component": "Over Time",
+					"custom_ot_hours": tab[i].get("total_hours"),
+					"custom_basic_salary": basic_amount,
 					"overwrite_salary_structure_amount": 0,
 					"amount": amount[0]
 				})
@@ -66,8 +68,10 @@ class QCSUAESimpleOT(Document):
 												
 						doc_tt = tab[i].get("territory")
 						if (doc_tt in tm_tt):
+							frappe.errprint("ppppppppppp")
 							pass
 						else:
+							frappe.errprint("llll")
 							doc = frappe.new_doc("Additional Salary")
 							doc.update({
 								"employee": self.employee,
@@ -79,4 +83,3 @@ class QCSUAESimpleOT(Document):
 							doc.insert(ignore_permissions=True)
 							doc.submit()
 							frappe.msgprint("Additional Salary Created Based on OT Food")
-							
