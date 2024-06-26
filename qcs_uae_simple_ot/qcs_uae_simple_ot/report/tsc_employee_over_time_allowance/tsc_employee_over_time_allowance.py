@@ -22,6 +22,11 @@ def get_columns(filters):
 			"options": "Employee",
 		},
 		{
+			"label": ("Employee Name"),
+			"fieldname": "employee_name",
+			"fieldtype": "Data",
+		},
+		{
 			"label": ("Basic Salary"),
 			"fieldname": "basic",
 			"fieldtype": "Currency",
@@ -105,6 +110,7 @@ def get_data(filters):
 		add_dict = {"employee": filters["employee"]}
 			
 		emp_doc = frappe.get_doc("Employee", filters["employee"])
+		add_dict["employee_name"] = emp_doc.employee_name
 		h_dates = []
 		if (emp_doc.holiday_list):
 			leave_doc = frappe.get_doc("Holiday List", emp_doc.holiday_list)
@@ -198,6 +204,7 @@ def get_data(filters):
 			add_dict = {"employee": i}
 			
 			emp_doc = frappe.get_doc("Employee", i)
+			add_dict["employee_name"] = emp_doc.employee_name
 			h_dates = []
 			if (emp_doc.holiday_list):
 				leave_doc = frappe.get_doc("Holiday List", emp_doc.holiday_list)

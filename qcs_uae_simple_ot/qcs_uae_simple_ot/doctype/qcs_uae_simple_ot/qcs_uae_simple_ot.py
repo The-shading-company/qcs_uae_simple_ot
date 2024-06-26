@@ -11,9 +11,14 @@ class QCSUAESimpleOT(Document):
 			tab = self.time_entries
 			emp_doc = frappe.get_doc("Employee", self.employee)
 			ot_setup = frappe.get_doc("QCS UAE Simple OT Setup")
+			basic_amount_lsit = []
 			ssa = frappe.get_list("Salary Structure Assignment",filters={"employee": self.employee},order_by="from_date desc",fields=["base"])
+			if ssa:
+				basic_amount_lsit.append(ssa[0].base)
+			else:
+				basic_amount_lsit.append(0)
 			#s_com = frappe.get_doc("Salary Component", ot_setup.basic_salary_component)
-			basic_amount = ssa[0].base
+			basic_amount = basic_amount_lsit[0]
 			for i in range(0, len(tab)):
        
 		# OverTime
@@ -68,10 +73,22 @@ class QCSUAESimpleOT(Document):
 												
 						doc_tt = tab[i].get("territory")
 						if (doc_tt in tm_tt):
-							frappe.errprint("ppppppppppp")
 							pass
 						else:
 							frappe.errprint("llll")
+							doc = frappe.new_doc("Additional Salary")
+							doc.update({
+								"employee": self.employee,
+								"payroll_date": tab[i].get("date"),
+								"salary_component": "OT Food",
+								"overwrite_salary_structure_amount": 0,
+								"amount": tm_doc.food_allowance
+							})
+							doc.insert(ignore_permissions=True)
+							doc.submit()
+							frappe.msgprint("Additional Salary Created Based on OT Food")
+					else:
+						if (tm_doc.food_allowance > 0):
 							doc = frappe.new_doc("Additional Salary")
 							doc.update({
 								"employee": self.employee,
