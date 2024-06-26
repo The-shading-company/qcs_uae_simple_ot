@@ -20,7 +20,7 @@ class QCSUAESimpleOT(Document):
 			#s_com = frappe.get_doc("Salary Component", ot_setup.basic_salary_component)
 			basic_amount = basic_amount_lsit[0]
 			for i in range(0, len(tab)):
-       
+	   
 		# OverTime
   
 				amount = []
@@ -54,13 +54,14 @@ class QCSUAESimpleOT(Document):
 					"salary_component": "Over Time",
 					"custom_ot_hours": tab[i].get("total_hours"),
 					"custom_basic_salary": basic_amount,
+					"custom_simple_it": self.name,
 					"overwrite_salary_structure_amount": 0,
 					"amount": amount[0]
 				})
 				doc.insert(ignore_permissions=True)
 				doc.submit()
 				frappe.msgprint("Additional Salary Created Based on Over Time")
-    
+	
 		# Food OT
   
 				if (tab[i].get("territory")):
@@ -82,6 +83,7 @@ class QCSUAESimpleOT(Document):
 								"payroll_date": tab[i].get("date"),
 								"salary_component": "OT Food",
 								"overwrite_salary_structure_amount": 0,
+								"custom_simple_it": self.name,
 								"amount": tm_doc.food_allowance
 							})
 							doc.insert(ignore_permissions=True)
@@ -95,8 +97,10 @@ class QCSUAESimpleOT(Document):
 								"payroll_date": tab[i].get("date"),
 								"salary_component": "OT Food",
 								"overwrite_salary_structure_amount": 0,
+								"custom_simple_it": self.name,
 								"amount": tm_doc.food_allowance
 							})
 							doc.insert(ignore_permissions=True)
 							doc.submit()
 							frappe.msgprint("Additional Salary Created Based on OT Food")
+				
