@@ -34,3 +34,4 @@ frappe.query_reports["TSC Employee Over Time Allowance"] = {
 
 	]
 };
+
