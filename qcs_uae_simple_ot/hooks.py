@@ -130,23 +130,23 @@ app_license = "mit"
 
 
 
-fixtures = [
-	{
-		"dt": "Custom Field", "filters": [
-			[
-				"name", "in", [
-					'Company-custom_sales_manager_max_discount',
-					'Company-custom_sales_man_max_discount',
-					'Additional Salary-custom_ot_hours',
-					'Additional Salary-custom_basic_salary',
-					'Additional Salary-custom_simple_it'
-				]
-			]
-		],
+# fixtures = [
+# 	{
+# 		"dt": "Custom Field", "filters": [
+# 			[
+# 				"name", "in", [
+# 					'Company-custom_sales_manager_max_discount',
+# 					'Company-custom_sales_man_max_discount',
+# 					'Additional Salary-custom_ot_hours',
+# 					'Additional Salary-custom_basic_salary',
+# 					'Additional Salary-custom_simple_it'
+# 				]
+# 			]
+# 		],
 
-	},
+# 	},
 	
-]
+# ]
 # doc_events = {
 # 	"*": {
 # 		"on_update": "method",
